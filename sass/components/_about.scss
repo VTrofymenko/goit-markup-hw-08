@@ -1,10 +1,18 @@
 .about-list {
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
+  // display: flex;
+  // margin-right: auto;
+  // margin-left: auto;
 
-  &__item + &__item {
-    margin-left: 30px;
+  // &__item + &__item {
+  //   margin-left: 30px;
+  // }
+
+  &__item + &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include tab {
+    width: calc(100% / 4 - 30 px);
   }
 }
 
@@ -19,19 +27,14 @@
 
 .about-list__title {
   margin-bottom: 10px;
-
+  text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 3%;
+  @include text(16px, 700, 16px, 3%);
 }
 
 .about-list__aftertitle {
-  width: 270px;
-
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 3%;
+  width: 450px;
+  // width: 270px;
+  @include text(14px, 500, 24px, 3%);
   color: var(--secondary-text-color);
 }

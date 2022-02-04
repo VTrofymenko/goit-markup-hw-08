@@ -1,47 +1,56 @@
 .hero {
-  padding: 200px 4px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-bcg.png);
+    url(../../images/hero-bcg-mob-1x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
+  @include tab {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero-bcg-tab-1x.png);
+  }
+
+  @include desk {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero-bcg.png);
+    max-width: 1600px;
+  }
 }
 
 .hero__title {
   position: relative;
-  padding-right: 0;
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
-
   text-align: center;
   text-transform: uppercase;
-  font-size: 44px;
-  font-weight: 900;
-  line-height: calc(60 / 44);
-  letter-spacing: 6%;
+  @include text(26px, 900, 42px, 0.06em);
   color: var(--hover-text-color);
+
+  @include desk {
+    max-width: 696px;
+    @include text(44px, 900, 60px, 6%);
+  }
 }
 
 .hero__button {
-  transition: var(--animation);
-
   display: inline-block;
-  padding: 10px 32px;
   border: transparent;
   border-radius: 4px;
-  margin-top: 20px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: inherit;
-  line-height: calc(30 / 16);
-  letter-spacing: 6%;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  @include text(16px, 700, 30px, 0.06em);
   color: var(--hover-text-color);
   background-color: var(--hover-background-color);
 
@@ -49,5 +58,9 @@
   &:focus {
     color: #ffffff;
     background-color: #188ce8;
+  }
+
+  @include desk {
+    transition: var(--animation);
   }
 }

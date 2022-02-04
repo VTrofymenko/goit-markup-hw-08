@@ -1,0 +1,24 @@
+@mixin mob {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin text($fs: 16px, $fw: 500, $lh: 20px, $ls: 0.02em) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: ($lh / $fs);
+  letter-spacing: $ls;
+}

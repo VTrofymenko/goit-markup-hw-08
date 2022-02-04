@@ -7,16 +7,32 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
+
+  @include mob {
+    width: 480px;
+  }
+
+  @include tab {
+    width: 768px;
+  }
+
+  @include desk {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header-nav--current {
