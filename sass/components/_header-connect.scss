@@ -1,0 +1,39 @@
+.header-connect {
+  margin-left: auto;
+}
+
+.contact-list {
+  display: flex;
+}
+
+.contact-list__link {
+  transition: var(--animation);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 2%;
+
+  &:hover,
+  &:focus {
+    color: var(--hover-background-color);
+  }
+}
+
+.contact-list__icon {
+  transition: var(--animation);
+  margin-right: 10px;
+  .contact-list__link:hover &,
+  .contact-list__link:focus & {
+    fill: var(--hover-background-color);
+  }
+}
+
+.contact-list__item + .contact-list__item {
+  margin-left: 50px;
+}
