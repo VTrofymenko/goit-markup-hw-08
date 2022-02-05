@@ -1,11 +1,22 @@
+// .hero-list {
+//   display: flex;
+//   justify-content: center;
+//   margin-bottom: 50px;
+// }
+
 .hero-list {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
 }
+
+// .hero-list-item + .hero-list-item {
+//   margin-left: 8px;
+// }
 
 .hero-list-item + .hero-list-item {
   margin-left: 8px;
+  margin-bottom: 15px;
 }
 
 .hero-list-button {
@@ -14,12 +25,7 @@
   border: transparent;
   border-radius: 4px;
 
-  font-family: inherit;
-  font-style: inherit;
-  font-size: inherit;
-  font-weight: 500;
-  line-height: calc(26 / 16);
-  letter-spacing: 3%;
+  @include text(16px, 500, 26px, 3%);
   background-color: #f5f4fa;
 
   &:hover,
