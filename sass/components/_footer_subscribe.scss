@@ -12,6 +12,9 @@
   margin-bottom: 20px;
   // padding-top: 72px;
   // margin-left: 93px;
+  @include tab {
+    margin-top: 0;
+  }
 }
 
 // .subscribe-form {

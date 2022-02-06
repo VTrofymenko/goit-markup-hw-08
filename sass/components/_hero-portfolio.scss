@@ -8,6 +8,12 @@
   display: inline-flex;
   flex-wrap: wrap;
   margin-bottom: -15px;
+  @include tab {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 // .hero-list-item + .hero-list-item {
@@ -17,6 +23,10 @@
 .hero-list-item + .hero-list-item {
   margin-left: 8px;
   margin-bottom: 15px;
+
+  @include tab {
+    margin-bottom: 0;
+  }
 }
 
 .hero-list-button {

@@ -2,10 +2,14 @@
   background-color: #2f303a;
   text-align: center;
   padding-bottom: 60px;
+}
 
-  // &-container {
-  //   display: flex;
-  // }
+.footer-container {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .footer-list {
