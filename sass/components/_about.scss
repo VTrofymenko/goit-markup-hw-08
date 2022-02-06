@@ -11,9 +11,9 @@
   }
 }
 
-.about-list__item + .about-list__item {
-  margin-left: 30px;
-}
+// .about-list__item + .about-list__item {
+//   margin-left: 30px;
+// }
 
 .about-list__item {
   @include tab {
