@@ -994,7 +994,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: -30px;
+    margin-left: -30px;
     margin-bottom: -30px;
   }
 }
@@ -1007,8 +1007,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .projects-list-item {
-    width: calc(100% / 2 - 60px);
-    margin-right: 30px;
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
     margin-bottom: 30px;
   }
 }
@@ -1021,12 +1021,6 @@ body {
 .project-container {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
-}
-
-@media screen and (min-width: 768px) {
-  .project-container:first-child {
-    padding: 20px, 24px, 56px, 24px;
-  }
 }
 
 .project-title {
