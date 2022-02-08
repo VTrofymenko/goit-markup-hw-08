@@ -2,8 +2,11 @@
   @include tab {
     padding-top: 65px;
   }
-  // padding-top: 72px;
-  // margin-left: 70px;
+
+  @include desk {
+    padding-top: 72px;
+    margin-left: 70px;
+  }
 }
 
 .join {

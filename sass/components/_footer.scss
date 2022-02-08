@@ -2,6 +2,10 @@
   background-color: #2f303a;
   text-align: center;
   padding-bottom: 60px;
+
+  @include desk {
+    padding-bottom: 0;
+  }
 }
 
 .footer-container {
@@ -10,12 +14,21 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+
+  @include desk {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 
 .footer-list {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
+
+  @include desk {
+    text-align: left;
+  }
 }
 
 .footer-list__item .street {
@@ -26,12 +39,14 @@
   margin-bottom: 20px;
 }
 
-// .footer-list__item + .footer-list__item {
-//   margin-top: 9px;
-// }
-
 .footer-list__item + .footer-list__item {
   margin-top: 8px;
+
+  @include desk {
+    & {
+      margin-top: 9px;
+    }
+  }
 }
 
 .footer-list__link {

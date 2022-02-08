@@ -10,6 +10,10 @@
     line-height: calc(42 / 36);
     letter-spacing: 3%;
   }
+
+  @include desk {
+    display: block;
+  }
 }
 
 .portfolio-list {
@@ -25,6 +29,7 @@
 .portfolio-list__item {
   display: none;
   @include desk {
+    display: flex;
     width: calc(100% / 3 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
@@ -34,6 +39,7 @@
 .image-wrapper {
   display: none;
   @include desk {
+    display: block;
     position: relative;
   }
 }
@@ -41,6 +47,7 @@
 .portfolio-list__wrapper {
   display: none;
   @include desk {
+    display: block;
     position: absolute;
     bottom: 0;
 
@@ -56,6 +63,7 @@
 .portfolio-list__title {
   display: none;
   @include desk {
+    display: inline-block;
     font-weight: 900;
     font-size: 14px;
     line-height: calc(16 / 14);
