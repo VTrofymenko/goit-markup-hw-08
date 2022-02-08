@@ -52,7 +52,7 @@
 
 .about-list__aftertitle {
   width: 450px;
-  @include text(14px, 500, 24px, 3%);
+  @include text(14px, 400, 24px, 3%);
   color: var(--secondary-text-color);
 
   @include tab {

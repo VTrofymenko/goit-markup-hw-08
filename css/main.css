@@ -370,13 +370,24 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--hover-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+
+.fieldset {
+  padding: 0;
 }
 
 .modal-button {
@@ -418,12 +429,22 @@ body {
 
 .modal-title {
   margin-bottom: 12px;
-  font-weight: 700;
   font-size: 20px;
-  line-height: calc(23 / 20);
-  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--Primary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
 }
 
 .input-form {
@@ -450,7 +471,7 @@ body {
 .modal-label {
   font-size: 12px;
   font-weight: 400;
-  line-height: calc(14 / 12);
+  line-height: 1.16667;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
 }
@@ -485,30 +506,88 @@ body {
 
 .modal-textarea::-webkit-input-placeholder {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  font-weight: 400;
+  line-height: 1.33333;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-textarea:-ms-input-placeholder {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  font-weight: 400;
+  line-height: 1.33333;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-textarea::-ms-input-placeholder {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  font-weight: 400;
+  line-height: 1.33333;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-textarea::placeholder {
   font-size: 12px;
-  line-height: calc(14 / 12);
+  font-weight: 400;
+  line-height: 1.33333;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-textarea::-webkit-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea:-ms-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea::-ms-input-placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.14286;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-textarea::-webkit-input-placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16667;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea:-ms-input-placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16667;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea::-ms-input-placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16667;
+    letter-spacing: 0.01em;
+  }
+  .modal-textarea::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16667;
+    letter-spacing: 0.01em;
+  }
 }
 
 .checkbox-label {
@@ -521,11 +600,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 13px;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16667;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    padding-left: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-label .checkbox-icon-span {
@@ -550,12 +639,21 @@ body {
 }
 
 .checkbox-agreement-link {
+  font-size: 12px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: 1.16667;
   letter-spacing: 0.03em;
   color: var(--hover-background-color);
   border-bottom: 1px solid var(--hover-background-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-agreement-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71429;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-agreement:checked + .checkbox-icon-span {
@@ -564,13 +662,13 @@ body {
 }
 
 .modal-submit-button {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 200px;
   height: 50px;
   background-color: var(--hover-background-color);
-  font-weight: 700;
   font-size: 16px;
-  line-height: calc(30 / 16);
+  font-weight: 700;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--hover-text-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -583,6 +681,12 @@ body {
 
 .modal-submit-button:hover, .modal-submit-button:focus {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-submit-button {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -661,7 +765,7 @@ body {
 .about-list__aftertitle {
   width: 450px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.71429;
   letter-spacing: 3%;
   color: var(--secondary-text-color);

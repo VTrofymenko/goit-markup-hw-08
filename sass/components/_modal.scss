@@ -3,13 +3,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--hover-text-color);
+
+  @include desk {
+    min-width: 528px;
+    min-height: 581px;
+  }
+}
+
+.fieldset {
+  padding: 0;
 }
 
 .modal-button {
@@ -46,12 +55,14 @@
 .modal-title {
   margin-bottom: 12px;
 
-  font-weight: 700;
-  font-size: 20px;
-  line-height: calc(23 / 20);
+  @include text(20px, 700, 30px, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--Primary-text-color);
+
+  @include desk {
+    @include text(20px, 700, 23px, 0.03em);
+    text-align: left;
+  }
 }
 
 .input-form {
@@ -75,10 +86,7 @@
 }
 
 .modal-label {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
+  @include text(12px, 400, 14px, 0.01em);
   color: var(--secondary-text-color);
 }
 
@@ -108,9 +116,16 @@
   }
 
   &::placeholder {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
+    @include text(12px, 400, 16px, 0.01em);
+
+    @include tab {
+      @include text(14px, 400, 16px, 0.01em);
+    }
+
+    @include desk {
+      @include text(12px, 400, 14px, 0.01em);
+    }
+
     color: rgba(117, 117, 117, 0.5);
   }
 }
@@ -119,11 +134,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-left: 13px;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+  @include text(12px, 400, 14px, 0.03em);
   color: var(--secondary-text-color);
+
+  @include desk {
+    padding-left: 13px;
+    @include text(14px, 400, 24px, 0.03em);
+  }
 }
 
 .checkbox-label .checkbox-icon-span {
@@ -141,12 +158,13 @@
   margin-right: 7px;
 
   &-link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: calc(24 / 14);
-    letter-spacing: 0.03em;
+    @include text(12px, 400, 14px, 0.03em);
     color: var(--hover-background-color);
     border-bottom: 1px solid var(--hover-background-color);
+
+    @include desk {
+      @include text(14px, 400, 24px, 0.03em);
+    }
   }
 }
 
@@ -156,14 +174,12 @@
 }
 
 .modal-submit-button {
-  margin-top: 30px;
+  margin-top: 20px;
   width: 200px;
   height: 50px;
   background-color: var(--hover-background-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
+  @include text(16px, 700, 30px, 0.06em);
+
   color: var(--hover-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -173,5 +189,9 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+
+  @include desk {
+    margin-top: 30px;
   }
 }
