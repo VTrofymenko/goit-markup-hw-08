@@ -1,3 +1,32 @@
+.icon-mob-menu-open {
+  fill: #000000;
+
+  .mob-menu-open:hover &,
+  .mob-menu-open:focus & {
+    fill: var(--hover-background-color);
+  }
+}
+
+.mob-menu-open {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  border: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  transition: var(--animation);
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .mob-menu {
   position: fixed;
   top: 0;
@@ -25,6 +54,8 @@
   height: 40px;
   background-color: transparent;
   border: transparent;
+
+  transition: var(--animation);
 }
 
 .mob-menu__item:not(:last-child) {
@@ -34,6 +65,7 @@
 .mob-menu__link {
   @include text(40px, 500, 47px, 0.02em);
   color: var(--Primary-text-color);
+  transition: var(--animation);
 }
 
 .mob-menu-connect__item:not(:last-child) {
@@ -43,6 +75,7 @@
 .mob-menu-connect__tel {
   @include text(34px, 500, 40px, 0.02em);
   color: var(--hover-background-color);
+  transform: var(--animation);
 }
 
 .mob-menu-connect__mail {
@@ -68,8 +101,16 @@
 .mob-menu-social__link {
   @include text(18px, 500, 22px, 0.02em);
   color: var(--hover-background-color);
+  transition: var(--animation);
 }
 
 .current {
   color: var(--hover-background-color);
+}
+
+.icon-mob-menu-close {
+  .mob-menu__close:hover &,
+  .mob-menu__close:focus & {
+    fill: var(--hover-background-color);
+  }
 }

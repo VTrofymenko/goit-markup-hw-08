@@ -270,6 +270,42 @@ body {
   margin-left: 50px;
 }
 
+.icon-mob-menu-open {
+  fill: #000000;
+}
+
+.mob-menu-open:hover .icon-mob-menu-open,
+.mob-menu-open:focus .icon-mob-menu-open {
+  fill: var(--hover-background-color);
+}
+
+.mob-menu-open {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  border: transparent;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  -webkit-transition: var(--animation);
+  transition: var(--animation);
+}
+
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .mob-menu {
   position: fixed;
   top: 0;
@@ -310,6 +346,8 @@ body {
   height: 40px;
   background-color: transparent;
   border: transparent;
+  -webkit-transition: var(--animation);
+  transition: var(--animation);
 }
 
 .mob-menu__item:not(:last-child) {
@@ -322,6 +360,8 @@ body {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--Primary-text-color);
+  -webkit-transition: var(--animation);
+  transition: var(--animation);
 }
 
 .mob-menu-connect__item:not(:last-child) {
@@ -334,6 +374,8 @@ body {
   line-height: 1.17647;
   letter-spacing: 0.02em;
   color: var(--hover-background-color);
+  -webkit-transform: var(--animation);
+          transform: var(--animation);
 }
 
 .mob-menu-connect__mail {
@@ -365,10 +407,17 @@ body {
   line-height: 1.22222;
   letter-spacing: 0.02em;
   color: var(--hover-background-color);
+  -webkit-transition: var(--animation);
+  transition: var(--animation);
 }
 
 .current {
   color: var(--hover-background-color);
+}
+
+.mob-menu__close:hover .icon-mob-menu-close,
+.mob-menu__close:focus .icon-mob-menu-close {
+  fill: var(--hover-background-color);
 }
 
 .hero {

@@ -54,13 +54,13 @@
                 </ul>
                 </div>
             </div>
-            <button type="button" class="mob-menu-open">
+            <button type="button" class="mob-menu-open" data-menu-open>
               <svg class="icon-mob-menu-open" width="24" height="16">
                 <use href="./images/icons.svg#icon-mob-menu-open"></use>
               </svg>
             </button>
-            <div class="mob-menu">
-              <button type="button" class="mob-menu__close">
+            <div class="mob-menu is-hidden" data-menu>
+              <button type="button" class="mob-menu__close" data-menu-close>
                 <svg class="icon-mob-menu-close" width="19" height="19">
                   <use href="./images/icons.svg#icon-mob-menu-close">
                   </use>
@@ -672,6 +672,7 @@
         </form>
     </div>
     </footer>
+    <script src="./js/mob-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
