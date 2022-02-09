@@ -19,6 +19,10 @@
   align-items: center;
   background-color: transparent;
   transition: var(--animation);
+
+  @include tab {
+    display: none;
+  }
 }
 
 .mob-menu.is-hidden {
@@ -41,6 +45,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include tab {
+    display: none;
+  }
 }
 
 .mob-menu__close {

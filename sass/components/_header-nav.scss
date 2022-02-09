@@ -5,7 +5,11 @@
 
 .header-nav__list {
   display: none;
-  // display: flex;
+
+  @include tab {
+    display: flex;
+    margin-left: 88px;
+  }
 }
 
 .header-nav__link {
