@@ -10,13 +10,14 @@
 .contact-list {
   display: flex;
   flex-direction: column;
+
+  @include desk {
+    flex-direction: row;
+  }
 }
 
 .contact-list__link {
   transition: var(--animation);
-
-  // padding-top: 32px;
-  // padding-bottom: 32px;
   display: flex;
   align-items: center;
 
@@ -29,6 +30,11 @@
   &:focus {
     color: var(--hover-background-color);
   }
+
+  @include desk {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contact-list__icon {
@@ -40,10 +46,11 @@
   }
 }
 
-// .contact-list__item + .contact-list__item {
-//   margin-left: 50px;
-// }
-
 .contact-list__item + .contact-list__item {
   margin-top: 10px;
+
+  @include desk {
+    margin-top: 0;
+    margin-left: 50px;
+  }
 }
