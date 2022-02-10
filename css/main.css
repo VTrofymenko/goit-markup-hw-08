@@ -584,6 +584,7 @@ body {
 
 .modal {
   position: absolute;
+  width: 90vw;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -595,10 +596,17 @@ body {
   background-color: var(--hover-text-color);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 58vw;
+    height: auto;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -1154,10 +1162,8 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 480px) {
-  .team-list__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.team-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
