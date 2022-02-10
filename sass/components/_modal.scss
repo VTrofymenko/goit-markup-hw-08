@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   width: 90vw;
   top: 50%;
   left: 50%;
@@ -12,6 +12,7 @@
   background-color: var(--hover-text-color);
 
   @include tab {
+    position: absolute;
     width: 58vw;
     height: auto;
   }
@@ -27,7 +28,7 @@
 }
 
 .modal-button {
-  position: absolute;
+  position: fixed;
   top: 8px;
   right: 8px;
 
